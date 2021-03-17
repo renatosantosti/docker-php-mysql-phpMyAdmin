@@ -1,7 +1,7 @@
 -- put in ./dump directory 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET time_zone = "+03:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,16 +10,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 
-CREATE TABLE `Person` (
+CREATE TABLE `Pessoa` (
   `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL
+  `nome` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `Person` (`id`, `name`) VALUES
-(1, 'William'),
-(2, 'Marc'),
-(3, 'John');
+INSERT INTO `Pessoa` (`id`, `nome`) VALUES
+(1, 'Maria Loisa'),
+(2, 'Euler'),
+(3, 'Deivys');
+(3, 'Ramon');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -13,15 +13,18 @@
 </head>
 <body>
     <div class="container">
-    <?php echo "<h1>Hi! I'm happy</h1>"; ?>
+    <?php echo "<h1>Test conexão</h1>"; ?>
 
     <?php
 
     $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
-
-    $query = 'SELECT * From Person';
+    if($conn){
+    $query = 'SELECT * FROM Pessoa';
     $result = mysqli_query($conn, $query);
+    $erro =  mysqli_error($conn);
+
+    print("<pre>Resultado => erro:$erro</pre>");
 
     echo '<table class="table table-striped">';
     echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
@@ -39,7 +42,9 @@
     $result->close();
 
     mysqli_close($conn);
-
+    }else{
+        echo 'Erro:' . mysqli_error($conn);
+    }
     ?>
     </div>
 </body>
